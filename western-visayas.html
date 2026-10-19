@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Western Visayas | Tourist Technical</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ===== WESTERN VISAYAS PAGE ===== */
+        
+.page-hero {
+    min-height: 380px;
+    padding: 70px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    background:
+        linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,.08)),
+        url("images/western-visayas.jpg") center/cover no-repeat;
+}
+
+.page-hero h1 {
+    margin: 10px 0;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.page-hero p {
+    max-width: 620px;
+    margin: 0;
+    line-height: 1.7;
+}
+
+        .page-hero h1 {
+            margin-bottom: 12px;
+            font-size: clamp(32px, 5vw, 48px);
+        }
+
+        .page-hero p {
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+
+        .destination-section {
+            padding: 65px 7%;
+        }
+
+        .destination-heading {
+            margin-bottom: 10px;
+            color: #075b59;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .destination-intro {
+            max-width: 650px;
+            margin: 0 auto 35px;
+            color: #5d706e;
+            text-align: center;
+        }
+
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .destination-card {
+            overflow: hidden;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .destination-card img {
+            display: block;
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .destination-details {
+            padding: 22px;
+        }
+
+        .destination-details h3 {
+            margin-bottom: 5px;
+            color: #075b59;
+            font-size: 23px;
+        }
+
+        .destination-location {
+            margin-bottom: 12px;
+            color: #71817e;
+            font-size: 13px;
+        }
+
+        .destination-details p {
+            margin-bottom: 18px;
+            color: #4d6460;
+            font-size: 15px;
+        }
+
+        .destination-link {
+            display: inline-block;
+            padding: 9px 18px;
+            border-radius: 5px;
+            background: #075b59;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.2s ease;
+        }
+
+        .destination-link:hover {
+            background: #0a7772;
+        }
+
+        .back-home {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .back-home a {
+            color: #075b59;
+            font-weight: bold;
+        }
+
+        @media (max-width: 650px) {
+            .page-hero {
+                padding: 55px 6%;
+            }
+
+            .destination-section {
+                padding: 45px 5%;
+            }
+
+            .destination-heading {
+                font-size: 27px;
+            }
+
+            .destination-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .destination-card img {
+                height: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <header>
+        <a href="index.html" class="logo">Tourist Technical</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="tour-packages.html">Tour Packages</a>
+        </nav>
+    </header>
+
+    <!-- ===== PAGE INTRODUCTION ===== -->
+    <section class="page-hero">
+        <h1>Discover Western Visayas</h1>
+        <p>
+            Explore beautiful beaches, peaceful islands, and crystal-clear
+            waters across Western Visayas. Find your next destination
+            and experience the beauty of the Philippines.
+        </p>
+    </section>
+
+    <!-- ===== DESTINATION CARDS ===== -->
+    <main>
+        <section class="destination-section">
+            <h2 class="destination-heading">Explore Our Destinations</h2>
+
+            <p class="destination-intro">
+                From world-famous shores to quiet island escapes,
+                discover four coastal destinations worth visiting.
+            </p>
+
+            <div class="destination-grid">
+
+                <!-- WHITE BEACH -->
+                <article class="destination-card">
+                    <img
+                        src="images/white-beach.jpg"
+                        alt="White Beach in Boracay"
+                    >
+
+                    <div class="destination-details">
+                        <h3>White Beach</h3>
+                        <div class="destination-location">
+                            Boracay, Aklan
+                        </div>
+
+                        <p>
+                            Famous for its powdery white sand, clear waters,
+                            beautiful sunsets, and lively beachfront.
+                        </p>
+
+                        <a href="white-beach.html" class="destination-link">
+                            Explore Destination
+                        </a>
+                    </div>
+                </article>
+
+                <!-- ANTONIA BEACH -->
+                <article class="destination-card">
+                    <img
+                        src="images/antonia-beach.jpg"
+                        alt="Antonia Beach in the Gigantes Islands"
+                    >
+
+                    <div class="destination-details">
+                        <h3>Antonia Beach</h3>
+                        <div class="destination-location">
+                            Gigantes Islands, Iloilo
+                        </div>
+
+                        <p>
+                            Enjoy white sand, turquoise waters, and dramatic
+                            rock formations in this scenic island escape.
+                        </p>
+
+                        <a href="antonia-beach.html" class="destination-link">
+                            Explore Destination
+                        </a>
+                    </div>
+                </article>
+
+                <!-- OLOTAYAN ISLAND -->
+                <article class="destination-card">
+                    <img
+                        src="images/olotayan-island.jpg"
+                        alt="Olotayan Island in Capiz"
+                    >
+
+                    <div class="destination-details">
+                        <h3>Olotayan Island</h3>
+                        <div class="destination-location">
+                            Roxas City, Capiz
+                        </div>
+
+                        <p>
+                            Escape to a peaceful island with coastal scenery,
+                            clear waters, and a relaxing atmosphere.
+                        </p>
+
+                        <a href="olotayan-island.html" class="destination-link">
+                            Explore Destination
+                        </a>
+                    </div>
+                </article>
+
+                <!-- ALOBIJOD COVE -->
+                <article class="destination-card">
+                    <img
+                        src="images/alobijod-cove.jpg"
+                        alt="Alobijod Cove in Guimaras"
+                    >
+
+                    <div class="destination-details">
+                        <h3>Alobijod Cove</h3>
+                        <div class="destination-location">
+                            Guimaras
+                        </div>
+
+                        <p>
+                            Relax by calm coastal waters and discover
+                            nearby islands through local island-hopping trips.
+                        </p>
+
+                        <a href="alobijod-cove.html" class="destination-link">
+                            Explore Destination
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="back-home">
+                <a href="index.html">&larr; Back to Home</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2026 Tourist Technical. Explore the beauty of the Philippines.</p>
+    </footer>
+
+</body>
+</html>

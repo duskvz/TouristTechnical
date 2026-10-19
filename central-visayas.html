@@ -1,0 +1,315 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Visayas | Tourist Technical</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Central Visayas navigation fix only */
+        body > header > nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        body > header > nav > .logo {
+            flex-shrink: 0;
+        }
+
+        body > header > nav > ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 30px;
+            list-style: none;
+            margin: 0 0 0 auto;
+            padding: 0;
+        }
+
+        body > header > nav > ul > li {
+            list-style: none;
+        }
+
+        body > header > nav > ul > li > a {
+            text-decoration: none;
+        }
+
+        .cv-hero {
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 20px;
+            color: white;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+                url("images/central-visayas.jpg") center/cover no-repeat;
+        }
+
+        .cv-hero-content {
+            max-width: 800px;
+        }
+
+        .cv-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 18px;
+        }
+
+        .cv-hero p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .cv-section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 65px 24px;
+        }
+
+        .cv-section-heading {
+            text-align: center;
+            margin-bottom: 38px;
+        }
+
+        .cv-section-heading h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .cv-section-heading p {
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.7;
+            color: #666;
+        }
+
+        .cv-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        .cv-card {
+            overflow: hidden;
+            border-radius: 14px;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.09);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .cv-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.13);
+        }
+
+        .cv-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .cv-card-content {
+            padding: 24px;
+        }
+
+        .cv-card-content h3 {
+            font-size: 1.4rem;
+            margin: 0 0 8px;
+        }
+
+        .cv-location {
+            color: #777;
+            font-size: 0.92rem;
+            margin-bottom: 14px;
+        }
+
+        .cv-card-content p {
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .cv-button {
+            display: inline-block;
+            padding: 11px 20px;
+            border-radius: 6px;
+            background: #176b67;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .cv-button:hover {
+            background: #10514e;
+        }
+
+        .cv-note {
+            margin-top: 45px;
+            padding: 25px;
+            background: #f3f7f6;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 700px) {
+            body > header > nav > ul {
+                gap: 12px;
+            }
+
+            .cv-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cv-hero {
+                min-height: 340px;
+            }
+
+            .cv-card img {
+                height: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Tourist Technical</div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="packages.html">Tour Packages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cv-hero">
+            <div class="cv-hero-content">
+                <h1>Discover Central Visayas</h1>
+                <p>
+                    From the island beaches of Cebu and Bohol to the peaceful
+                    shores of Siquijor and the natural beauty of Negros Oriental,
+                    explore some of the region's memorable coastal destinations.
+                </p>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <div class="cv-section-heading">
+                <h2>Explore Central Visayas</h2>
+                <p>
+                    Discover beautiful coastlines, clear waters, island
+                    adventures, and relaxing seaside escapes across the region.
+                </p>
+            </div>
+
+            <div class="cv-grid">
+
+                <article class="cv-card">
+                    <img
+                        src="images/bounty-beach.jpg"
+                        alt="White sand and clear waters at Bounty Beach, Malapascua Island"
+                    >
+                    <div class="cv-card-content">
+                        <h3>Bounty Beach</h3>
+                        <div class="cv-location">Malapascua Island, Cebu</div>
+                        <p>
+                            A relaxed beachfront destination known for its
+                            powdery sand, seaside restaurants, dive shops,
+                            and access to thresher shark diving excursions.
+                        </p>
+                        <a href="bounty-beach.html" class="cv-button">
+                            Explore Destination
+                        </a>
+                    </div>
+                </article>
+
+                <article class="cv-card">
+                    <img
+                        src="images/alona-beach.jpg"
+                        alt="Turquoise water and white sand at Alona Beach, Panglao"
+                    >
+                    <div class="cv-card-content">
+                        <h3>Alona Beach</h3>
+                        <div class="cv-location">Panglao Island, Bohol</div>
+                        <p>
+                            A popular tropical beach with beachfront resorts,
+                            restaurants, lively seaside activities, and access
+                            to island-hopping and diving excursions.
+                        </p>
+                        <a href="alona-beach.html" class="cv-button">
+                            Explore Destination
+                        </a>
+                    </div>
+                </article>
+
+                <article class="cv-card">
+                    <img
+                        src="images/paliton-beach.jpg"
+                        alt="Palm trees and clear turquoise water at Paliton Beach, Siquijor"
+                    >
+                    <div class="cv-card-content">
+                        <h3>Paliton Beach</h3>
+                        <div class="cv-location">San Juan, Siquijor</div>
+                        <p>
+                            A scenic white-sand beach framed by leaning
+                            coconut trees, clear water, and a peaceful
+                            atmosphere, especially beautiful around sunset.
+                        </p>
+                        <a href="paliton-beach.html" class="cv-button">
+                            Explore Destination
+                        </a>
+                    </div>
+                </article>
+
+                <article class="cv-card">
+                    <img
+                        src="images/manjuyod-sandbar.jpg"
+                        alt="Shallow turquoise water and stilt cottages at Manjuyod Sandbar"
+                    >
+                    <div class="cv-card-content">
+                        <h3>Manjuyod Sandbar</h3>
+                        <div class="cv-location">Bais City, Negros Oriental</div>
+                        <p>
+                            A remarkable stretch of white sand surrounded by
+                            shallow turquoise waters, with stilt cottages and
+                            boat excursions that may include dolphin watching.
+                        </p>
+                        <a href="manjuyod-sandbar.html" class="cv-button">
+                            Explore Destination
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="cv-note">
+                <h3>Find Your Next Island Escape</h3>
+                <p>
+                    Choose a destination to learn more about its attractions
+                    and explore the available tour options.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tourist Technical. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+```

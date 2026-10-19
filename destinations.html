@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | Tourist Technical</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* DESTINATIONS PAGE ONLY */
+
+        .dest-hero {
+            min-height: 300px;
+            padding: 65px 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+                url("images/boracay.jpg") center/cover no-repeat;
+        }
+
+        .dest-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin: 0 0 15px;
+        }
+
+        .dest-hero p {
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .dest-section {
+            padding: 55px 8%;
+        }
+
+        .dest-intro {
+            max-width: 700px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .dest-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 25px 0 30px;
+        }
+
+        .dest-filter {
+            padding: 10px 18px;
+            border: 1px solid #174f4a;
+            border-radius: 25px;
+            background: transparent;
+            color: #174f4a;
+            cursor: pointer;
+            font: inherit;
+            transition: 0.2s;
+        }
+
+        .dest-filter:hover,
+        .dest-filter.active {
+            background: #174f4a;
+            color: white;
+        }
+
+        .dest-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .dest-card {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            border: 1px solid #dedede;
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .dest-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+        }
+
+        .dest-card[hidden] {
+            display: none;
+        }
+
+        .dest-card img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .dest-card-info {
+            padding: 20px;
+        }
+
+        .dest-region {
+            color: #39766c;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+        }
+
+        .dest-card h3 {
+            margin: 10px 0;
+        }
+
+        .dest-card p {
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .dest-link {
+            color: #174f4a;
+            font-weight: bold;
+        }
+
+        .dest-empty {
+            margin-top: 20px;
+        }
+
+        .dest-cta {
+            margin: 0 8% 55px;
+            padding: 40px;
+            text-align: center;
+            background: #f4f7f6;
+            border-radius: 10px;
+        }
+
+        .dest-cta p {
+            line-height: 1.8;
+        }
+
+        .dest-cta a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 22px;
+            background: #174f4a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .dest-cta a:hover {
+            background: #103c38;
+        }
+
+        @media (max-width: 900px) {
+            .dest-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .dest-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dest-section {
+                padding: 40px 6%;
+            }
+
+            .dest-hero {
+                padding: 45px 6%;
+            }
+
+            .dest-card img {
+                height: 230px;
+            }
+
+            .dest-cta {
+                margin: 0 6% 40px;
+                padding: 28px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Tourist Technical</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="packages.html">Tour Packages</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="dest-hero">
+            <h1>Find Your Next Escape</h1>
+            <p>
+                From famous white-sand beaches to quiet island
+                getaways, discover beautiful destinations across
+                Western, Central, and Eastern Visayas.
+            </p>
+        </section>
+
+        <!-- BEACH GALLERY -->
+        <section class="dest-section">
+            <h2>Explore Our Destinations</h2>
+            <p class="dest-intro">
+                Every island has something different to offer.
+                Browse our collection of beaches and islands,
+                then select a destination to learn more.
+            </p>
+
+            <!-- REGION FILTERS -->
+            <div class="dest-filters" aria-label="Filter destinations">
+                <button class="dest-filter active"
+                        type="button"
+                        data-region="all"
+                        aria-pressed="true">
+                    All Destinations
+                </button>
+
+                <button class="dest-filter"
+                        type="button"
+                        data-region="western"
+                        aria-pressed="false">
+                    Western Visayas
+                </button>
+
+                <button class="dest-filter"
+                        type="button"
+                        data-region="central"
+                        aria-pressed="false">
+                    Central Visayas
+                </button>
+
+                <button class="dest-filter"
+                        type="button"
+                        data-region="eastern"
+                        aria-pressed="false">
+                    Eastern Visayas
+                </button>
+            </div>
+
+            <div class="dest-grid" id="destinationGrid">
+
+                <!-- WESTERN VISAYAS -->
+
+                <a href="destination-details.html"
+                   class="dest-card"
+                   data-region="western">
+                    <img src="images/boracay.jpg"
+                         alt="White Beach in Boracay">
+                    <div class="dest-card-info">
+                        <span class="dest-region">WESTERN VISAYAS</span>
+                        <h3>White Beach, Boracay</h3>
+                        <p>
+                            Walk along powdery white sand, enjoy
+                            clear blue waters, and watch the sunset
+                            over one of the Philippines' best-known
+                            beach destinations.
+                        </p>
+                        <span class="dest-link">Discover Destination →</span>
+                    </div>
+                </a>
+
+                <!-- CENTRAL VISAYAS -->
+
+                <a href="bounty-beach.html"
+                   class="dest-card"
+                   data-region="central">
+                    <img src="images/bounty-beach.jpg"
+                         alt="Bounty Beach on Malapascua Island">
+                    <div class="dest-card-info">
+                        <span class="dest-region">CENTRAL VISAYAS</span>
+                        <h3>Bounty Beach</h3>
+                        <p>
+                            Experience the laid-back atmosphere of
+                            Malapascua Island, with sandy shores
+                            and opportunities for island adventures.
+                        </p>
+                        <span class="dest-link">Discover Destination →</span>
+                    </div>
+                </a>
+
+                <a href="alona-beach.html"
+                   class="dest-card"
+                   data-region="central">
+                    <img src="images/alona-beach.jpg"
+                         alt="Alona Beach in Panglao, Bohol">
+                    <div class="dest-card-info">
+                        <span class="dest-region">CENTRAL VISAYAS</span>
+                        <h3>Alona Beach</h3>
+                        <p>
+                            Visit Panglao's popular beach for clear
+                            waters, coastal dining, and access to
+                            nearby marine attractions.
+                        </p>
+                        <span class="dest-link">Discover Destination →</span>
+                    </div>
+                </a>
+
+                <a href="paliton-beach.html"
+                   class="dest-card"
+                   data-region="central">
+                    <img src="images/paliton-beach.jpg"
+                         alt="Paliton Beach on Siquijor Island">
+                    <div class="dest-card-info">
+                        <span class="dest-region">CENTRAL VISAYAS</span>
+                        <h3>Paliton Beach</h3>
+                        <p>
+                            Find a peaceful coastal escape on
+                            Siquijor, known for its tropical scenery
+                            and beautiful beach sunsets.
+                        </p>
+                        <span class="dest-link">Discover Destination →</span>
+                    </div>
+                </a>
+
+                <a href="manjuyod-sandbar.html"
+                   class="dest-card"
+                   data-region="central">
+                    <img src="images/manjuyod-sandbar.jpg"
+                         alt="Manjuyod Sandbar in Negros Oriental">
+                    <div class="dest-card-info">
+                        <span class="dest-region">CENTRAL VISAYAS</span>
+                        <h3>Manjuyod Sandbar</h3>
+                        <p>
+                            Discover a stretch of white sand that
+                            emerges at low tide, surrounded by the
+                            clear waters of Negros Oriental.
+                        </p>
+                        <span class="dest-link">Discover Destination →</span>
+                    </div>
+                </a>
+
+                <!-- EASTERN VISAYAS -->
+
+                <a href="kalanggaman-island.html"
+                   class="dest-card"
+                   data-region="eastern">
+                    <img src="images/kalanggaman-island.jpg"
+                         alt="Kalanggaman Island's long sandbar">
+                    <div class="dest-card-info">
+                        <span class="dest-region">EASTERN VISAYAS</span>
+                        <h3>Kalanggaman Island</h3>
+                        <p>
+                            Admire a long white sandbar extending
+                            into turquoise waters off the coast
+                            of Leyte.
+                        </p>
+                        <span class="dest-link">Discover Destination →</span>
+                    </div>
+                </a>
+
+                <a href="sambawan-island.html"
+                   class="dest-card"
+                   data-region="eastern">
+                    <img src="images/sambawan-island.jpg"
+                         alt="Sambawan Island in Biliran">
+                    <div class="dest-card-info">
+                        <span class="dest-region">EASTERN VISAYAS</span>
+                        <h3>Sambawan Island</h3>
+                        <p>
+                            Take in rugged island scenery, clear
+                            waters, and panoramic views of the
+                            surrounding sea.
+                        </p>
+                        <span class="dest-link">Discover Destination →</span>
+                    </div>
+                </a>
+
+                <a href="sila-island.html"
+                   class="dest-card"
+                   data-region="eastern">
+                    <img src="images/sila-island.jpg"
+                         alt="Sila Island's pinkish beach">
+                    <div class="dest-card-info">
+                        <span class="dest-region">EASTERN VISAYAS</span>
+                        <h3>Sila Island Pink Beach</h3>
+                        <p>
+                            See the pinkish tones of the sand and
+                            enjoy the quieter coastal scenery of
+                            San Vicente, Northern Samar.
+                        </p>
+                        <span class="dest-link">Discover Destination →</span>
+                    </div>
+                </a>
+
+                <a href="calicoan-island.html"
+                   class="dest-card"
+                   data-region="eastern">
+                    <img src="images/calicoan-island.jpg"
+                         alt="Calicoan Island's rocky coastline and beach">
+                    <div class="dest-card-info">
+                        <span class="dest-region">EASTERN VISAYAS</span>
+                        <h3>Calicoan Island</h3>
+                        <p>
+                            Explore Eastern Samar's rugged coastline
+                            and surf spots, including the area
+                            around ABCD Beach.
+                        </p>
+                        <span class="dest-link">Discover Destination →</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <p id="destEmpty" class="dest-empty" hidden>
+                No destinations are listed for this region yet.
+            </p>
+        </section>
+
+        <!-- TOUR PACKAGE CTA -->
+        <section class="dest-cta">
+            <h2>Ready for Your Next Adventure?</h2>
+            <p>
+                Found a destination that caught your eye?
+                Explore our tour packages and start planning
+                your next Visayas getaway.
+            </p>
+            <a href="packages.html">Explore Tour Packages</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tourist Technical. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const filterButtons = document.querySelectorAll(".dest-filter");
+        const destinationCards = document.querySelectorAll(".dest-card");
+        const emptyMessage = document.getElementById("destEmpty");
+
+        filterButtons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                const selectedRegion = button.dataset.region;
+                let visibleCount = 0;
+
+                filterButtons.forEach(function(filter) {
+                    const isActive = filter === button;
+                    filter.classList.toggle("active", isActive);
+                    filter.setAttribute("aria-pressed", isActive);
+                });
+
+                destinationCards.forEach(function(card) {
+                    const matches =
+                        selectedRegion === "all" ||
+                        card.dataset.region === selectedRegion;
+
+                    card.hidden = !matches;
+
+                    if (matches) {
+                        visibleCount++;
+                    }
+                });
+
+                emptyMessage.hidden = visibleCount > 0;
+            });
+        });
+    </script>
+
+</body>
+</html>

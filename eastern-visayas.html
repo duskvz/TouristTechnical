@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eastern Visayas | Tourist Technical</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Navigation fix for this page only */
+        body > header > nav {
+            display: flex !important;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        body > header > nav > .logo {
+            flex-shrink: 0;
+        }
+
+        body > header > nav > ul {
+            display: flex !important;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 30px;
+            list-style: none;
+            margin: 0 0 0 auto;
+            padding: 0;
+        }
+
+        body > header > nav > ul > li {
+            list-style: none;
+        }
+
+        body > header > nav > ul > li > a {
+            text-decoration: none;
+        }
+
+        .ev-hero {
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 20px;
+            color: white;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+                url("images/eastern-visayas.jpg") center/cover no-repeat;
+        }
+
+        .ev-hero-content {
+            max-width: 800px;
+        }
+
+        .ev-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 18px;
+        }
+
+        .ev-hero p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .ev-section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 65px 24px;
+        }
+
+        .ev-section-heading {
+            text-align: center;
+            margin-bottom: 38px;
+        }
+
+        .ev-section-heading h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .ev-section-heading p {
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.7;
+            color: #666;
+        }
+
+        .ev-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        .ev-card {
+            overflow: hidden;
+            border-radius: 14px;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.09);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .ev-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.13);
+        }
+
+        .ev-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ev-card-content {
+            padding: 24px;
+        }
+
+        .ev-card-content h3 {
+            font-size: 1.4rem;
+            margin: 0 0 8px;
+        }
+
+        .ev-location {
+            color: #777;
+            font-size: 0.92rem;
+            margin-bottom: 14px;
+        }
+
+        .ev-card-content p {
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .ev-button {
+            display: inline-block;
+            padding: 11px 20px;
+            border-radius: 6px;
+            background: #176b67;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .ev-button:hover {
+            background: #10514e;
+        }
+
+        .ev-note {
+            margin-top: 45px;
+            padding: 25px;
+            background: #f3f7f6;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 700px) {
+            body > header > nav > ul {
+                gap: 12px;
+            }
+
+            .ev-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ev-hero {
+                min-height: 340px;
+            }
+
+            .ev-card img {
+                height: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Tourist Technical</div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="packages.html">Tour Packages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="ev-hero">
+            <div class="ev-hero-content">
+                <h1>Discover Eastern Visayas</h1>
+                <p>
+                    From the brilliant white sandbar of Kalanggaman Island
+                    to pink shores, dramatic island landscapes, and Pacific
+                    surf breaks, explore the natural beauty of Eastern Visayas.
+                </p>
+            </div>
+        </section>
+
+        <section class="ev-section">
+            <div class="ev-section-heading">
+                <h2>Explore Eastern Visayas</h2>
+                <p>
+                    Discover remote island escapes, marine sanctuaries,
+                    unusual coastal landscapes, and unforgettable ocean views
+                    across Leyte, Biliran, Northern Samar, and Eastern Samar.
+                </p>
+            </div>
+
+            <div class="ev-grid">
+
+                <article class="ev-card">
+                    <img
+                        src="images/kalanggaman-island.jpg"
+                        alt="Long white sandbar surrounded by turquoise water at Kalanggaman Island"
+                    >
+
+                    <div class="ev-card-content">
+                        <h3>Kalanggaman Island</h3>
+                        <div class="ev-location">Palompon, Leyte</div>
+
+                        <p>
+                            Famous for its long, bone-white sandbar and
+                            crystal-clear waters, this protected island offers
+                            a peaceful escape for swimming, snorkeling,
+                            photography, and enjoying unspoiled coastal scenery.
+                        </p>
+
+                        <a href="kalanggaman-island.html" class="ev-button">
+                            Explore Destination
+                        </a>
+                    </div>
+                </article>
+
+                <article class="ev-card">
+                    <img
+                        src="images/sambawan-island.jpg"
+                        alt="Green rocky islets and clear blue sea around Sambawan Island"
+                    >
+
+                    <div class="ev-card-content">
+                        <h3>Sambawan Island</h3>
+                        <div class="ev-location">Maripipi, Biliran</div>
+
+                        <p>
+                            A striking island marine sanctuary featuring
+                            grassy hills, rocky coastlines, and clear water.
+                            Hike to an elevated viewpoint, snorkel around
+                            the island, or enjoy a quiet night camping.
+                        </p>
+
+                        <a href="sambawan-island.html" class="ev-button">
+                            Explore Destination
+                        </a>
+                    </div>
+                </article>
+
+                <article class="ev-card">
+                    <img
+                        src="images/sila-island.jpg"
+                        alt="Pink-tinted sand along the shoreline of Sila Island"
+                    >
+
+                    <div class="ev-card-content">
+                        <h3>Sila Island Pink Beach</h3>
+                        <div class="ev-location">San Vicente, Northern Samar</div>
+
+                        <p>
+                            A rare coastal destination known for its
+                            pink-tinted sand, formed by a mixture of pale
+                            beach sand and reddish coral fragments.
+                            Its remote setting makes it appealing to
+                            travelers seeking a quieter island experience.
+                        </p>
+
+                        <a href="sila-island.html" class="ev-button">
+                            Explore Destination
+                        </a>
+                    </div>
+                </article>
+
+                <article class="ev-card">
+                    <img
+                        src="images/calicoan-island.jpg"
+                        alt="Pacific Ocean waves breaking along the coast of Calicoan Island"
+                    >
+
+                    <div class="ev-card-content">
+                        <h3>Calicoan Island / ABCD Beach</h3>
+                        <div class="ev-location">Guiuan, Eastern Samar</div>
+
+                        <p>
+                            Known for its Pacific-facing coastline and
+                            surf breaks, Calicoan Island attracts surfers
+                            and adventurous travelers. Explore its coastal
+                            scenery, tidal pools, and nearby natural
+                            attractions while respecting local conditions.
+                        </p>
+
+                        <a href="calicoan-island.html" class="ev-button">
+                            Explore Destination
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="ev-note">
+                <h3>Your Next Island Adventure Awaits</h3>
+                <p>
+                    Choose a destination to discover its highlights,
+                    learn useful visitor information, and explore
+                    available tour options.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tourist Technical. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

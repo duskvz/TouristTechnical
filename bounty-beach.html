@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounty Beach, Malapascua | Tourist Technical</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .wb-hero {
+            min-height: 380px;
+            padding: 70px 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: white;
+            background:
+                linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,.08)),
+                url("images/bounty-beach.jpg") center/cover no-repeat;
+        }
+
+        .wb-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            margin: 10px 0;
+        }
+
+        .wb-hero p {
+            max-width: 620px;
+            line-height: 1.7;
+        }
+
+        .wb-label {
+            font-size: .8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .wb-section {
+            padding: 55px 8%;
+        }
+
+        .wb-section h2 {
+            margin-bottom: 15px;
+        }
+
+        .wb-intro {
+            max-width: 800px;
+            line-height: 1.8;
+        }
+
+        .wb-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .wb-info-card {
+            padding: 24px;
+            border: 1px solid #dedede;
+            border-radius: 10px;
+        }
+
+        .wb-info-card h3 {
+            margin-top: 0;
+        }
+
+        .wb-info-card p,
+        .wb-section li {
+            line-height: 1.7;
+        }
+
+        .wb-two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .wb-reservation {
+            background: #f4f7f6;
+        }
+
+        .wb-form {
+            max-width: 760px;
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .wb-field {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .wb-field.full {
+            grid-column: 1 / -1;
+        }
+
+        .wb-field label {
+            font-weight: 600;
+        }
+
+        .wb-field input,
+        .wb-field select,
+        .wb-field textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            font: inherit;
+            border: 1px solid #c9d0ce;
+            border-radius: 6px;
+            background: white;
+        }
+
+        .wb-submit {
+            padding: 13px 20px;
+            border: none;
+            border-radius: 6px;
+            background: #174f4a;
+            color: white;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        .wb-submit:hover {
+            background: #103c38;
+        }
+
+        .wb-notice {
+            margin-top: 24px;
+            padding: 20px;
+            background: white;
+            border: 1px solid #b9d4ca;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        .wb-notice h3 {
+            margin-top: 0;
+        }
+
+        .wb-back {
+            display: inline-block;
+            margin-top: 20px;
+            color: inherit;
+        }
+
+        @media (max-width: 700px) {
+            .wb-info-grid,
+            .wb-two-column,
+            .wb-form {
+                grid-template-columns: 1fr;
+            }
+
+            .wb-field.full {
+                grid-column: auto;
+            }
+
+            .wb-hero {
+                min-height: 300px;
+                padding: 45px 6%;
+            }
+
+            .wb-section {
+                padding: 40px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Tourist Technical</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="packages.html">Tour Packages</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="wb-hero">
+            <span class="wb-label">Central Visayas · Cebu</span>
+            <h1>Bounty Beach, Malapascua</h1>
+            <p>
+                Discover a peaceful island shoreline, relaxed beachfront
+                dining, and access to some of the Philippines' most
+                well-known diving experiences.
+            </p>
+        </section>
+
+        <section class="wb-section">
+            <span class="wb-label">Destination Overview</span>
+            <h2>About Bounty Beach</h2>
+            <p class="wb-intro">
+                Bounty Beach is a popular beachfront area on Malapascua
+                Island in Daanbantayan, northern Cebu. It is known for its
+                sandy shoreline, clear coastal waters, small resorts,
+                restaurants, and dive shops. The beach provides a convenient
+                base for visitors who want to relax by the sea or explore
+                the waters surrounding the island.
+                Malapascua is also famous for thresher shark diving
+                excursions, particularly around Monad Shoal, although
+                wildlife sightings can never be guaranteed.
+            </p>
+
+            <div class="wb-info-grid">
+                <article class="wb-info-card">
+                    <h3>Location</h3>
+                    <p>
+                        Bounty Beach, Malapascua Island, Municipality of
+                        Daanbantayan, Province of Cebu, Philippines.
+                    </p>
+                </article>
+
+                <article class="wb-info-card">
+                    <h3>Highlights</h3>
+                    <p>
+                        Sandy shores, beachfront restaurants, diving
+                        excursions, island scenery, and relaxed seaside stays.
+                    </p>
+                </article>
+
+                <article class="wb-info-card">
+                    <h3>Best For</h3>
+                    <p>
+                        Beach relaxation, scuba diving, photography,
+                        couples, and travelers looking for an island escape.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="wb-section">
+            <div class="wb-two-column">
+                <div>
+                    <span class="wb-label">Visitor Guide</span>
+                    <h2>Things to Do</h2>
+                    <ul>
+                        <li>Relax along the sandy shoreline and enjoy the sea views.</li>
+                        <li>Visit local restaurants and beachfront cafés.</li>
+                        <li>Arrange a guided diving excursion with a qualified operator.</li>
+                        <li>Explore nearby beaches and island attractions.</li>
+                        <li>Ask local operators about thresher shark diving trips.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <span class="wb-label">Responsible Tourism</span>
+                    <h2>Before You Visit</h2>
+                    <ul>
+                        <li>Arrange boat transfers to Malapascua in advance.</li>
+                        <li>Check sea conditions and local travel advisories.</li>
+                        <li>Follow your dive guide's safety instructions.</li>
+                        <li>Never touch, chase, or disturb marine wildlife.</li>
+                        <li>Dispose of waste properly and respect the local community.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="wb-section wb-reservation" id="reservation">
+            <span class="wb-label">Reservation</span>
+            <h2>Plan Your Visit</h2>
+            <p class="wb-intro">
+                Choose a tour option, select your preferred date, and enter
+                your reservation details. Review the information before
+                submitting your request.
+            </p>
+
+            <form class="wb-form" id="reservationForm">
+                <div class="wb-field full">
+                    <label for="package">Tour Package</label>
+                    <select id="package" name="package" required>
+                        <option value="">Select a tour package</option>
+                        <option value="Bounty Beach Leisure Tour">
+                            Bounty Beach Leisure Tour
+                        </option>
+                        <option value="Malapascua Island-Hopping Tour">
+                            Malapascua Island-Hopping Tour
+                        </option>
+                        <option value="Malapascua Diving Excursion">
+                            Malapascua Diving Excursion
+                        </option>
+                    </select>
+                </div>
+
+                <div class="wb-field">
+                    <label for="guestName">Full Name</label>
+                    <input
+                        type="text"
+                        id="guestName"
+                        name="guestName"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="wb-field">
+                    <label for="contact">Contact Number or Email</label>
+                    <input
+                        type="text"
+                        id="contact"
+                        name="contact"
+                        required
+                    >
+                </div>
+
+                <div class="wb-field">
+                    <label for="date">Preferred Date</label>
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        required
+                    >
+                </div>
+
+                <div class="wb-field">
+                    <label for="guests">Number of Guests</label>
+                    <input
+                        type="number"
+                        id="guests"
+                        name="guests"
+                        min="1"
+                        max="50"
+                        value="1"
+                        required
+                    >
+                </div>
+
+                <div class="wb-field full">
+                    <label for="requests">Additional Requests (Optional)</label>
+                    <textarea
+                        id="requests"
+                        name="requests"
+                        rows="3"
+                        placeholder="Enter any additional requests here."
+                    ></textarea>
+                </div>
+
+                <div class="wb-field full">
+                    <button class="wb-submit" type="submit">
+                        Submit Reservation Request
+                    </button>
+                </div>
+            </form>
+
+            <div
+                id="reservationResult"
+                class="wb-notice"
+                role="status"
+                aria-live="polite"
+                hidden
+            ></div>
+
+            <a class="wb-back" href="central-visayas.html">
+                ← Back to Central Visayas
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tourist Technical. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const reservationForm = document.getElementById("reservationForm");
+        const reservationResult = document.getElementById("reservationResult");
+        const dateInput = document.getElementById("date");
+
+        const today = new Date();
+        const localToday = [
+            today.getFullYear(),
+            String(today.getMonth() + 1).padStart(2, "0"),
+            String(today.getDate()).padStart(2, "0")
+        ].join("-");
+
+        dateInput.min = localToday;
+
+        reservationForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            if (!reservationForm.checkValidity()) {
+                reservationForm.reportValidity();
+                return;
+            }
+
+            const packageName = document.getElementById("package").value;
+            const guestName = document.getElementById("guestName").value.trim();
+            const contact = document.getElementById("contact").value.trim();
+            const date = dateInput.value;
+            const guests = document.getElementById("guests").value;
+            const requests = document.getElementById("requests").value.trim();
+
+            const formattedDate = new Date(date + "T12:00:00")
+                .toLocaleDateString("en-PH", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                });
+
+            reservationResult.replaceChildren();
+
+            const heading = document.createElement("h3");
+            heading.textContent = "Reservation Request Summary";
+
+            const status = document.createElement("p");
+            status.textContent = "Demo Status: Pending Review";
+
+            const summary = document.createElement("p");
+            summary.textContent =
+                "Destination: Bounty Beach, Malapascua" +
+                " | Package: " + packageName +
+                " | Guest: " + guestName +
+                " | Contact: " + contact +
+                " | Preferred Date: " + formattedDate +
+                " | Guests: " + guests;
+
+            reservationResult.append(heading, status, summary);
+
+            if (requests) {
+                const requestText = document.createElement("p");
+                requestText.textContent = "Additional Requests: " + requests;
+                reservationResult.appendChild(requestText);
+            }
+
+            const note = document.createElement("p");
+            note.textContent =
+                "This is a front-end demonstration only. No reservation " +
+                "has been stored or sent to an actual booking system.";
+            reservationResult.appendChild(note);
+
+            reservationResult.hidden = false;
+            reservationResult.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
+        });
+    </script>
+</body>
+</html>

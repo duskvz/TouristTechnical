@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Packages | Tourist Technical</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .pkg-hero {
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+                url("images/boracay.jpg") center/cover no-repeat;
+        }
+
+        .pkg-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .pkg-hero p {
+            max-width: 650px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .pkg-hero a,
+        .pkg-cta a {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #174f4a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .pkg-hero a:hover,
+        .pkg-cta a:hover {
+            background: #103c38;
+        }
+
+        .pkg-section {
+            padding: 55px 8%;
+            background: #f4f7f6;
+        }
+
+        .pkg-section h2 {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .pkg-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 35px;
+            line-height: 1.7;
+        }
+
+        .pkg-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .pkg-card {
+            background: white;
+            border: 1px solid #dedede;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+        }
+
+        .pkg-card > img {
+            display: block;
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .pkg-card-content {
+            padding: 22px;
+        }
+
+        .pkg-location {
+            color: #47756f;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .pkg-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .pkg-description {
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .pkg-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .pkg-meta span {
+            background: #f0f4f3;
+            padding: 7px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .pkg-price {
+            border-top: 1px solid #dedede;
+            padding-top: 16px;
+            margin-top: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .pkg-price strong {
+            color: #174f4a;
+            font-size: 1.7rem;
+        }
+
+        .pkg-button {
+            width: 100%;
+            margin-top: 18px;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 5px;
+            background: #174f4a;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .pkg-button:hover {
+            background: #103c38;
+        }
+
+        .pkg-details {
+            margin-top: 20px;
+            padding-top: 18px;
+            border-top: 1px solid #dedede;
+            line-height: 1.7;
+        }
+
+        .pkg-details h4 {
+            margin: 14px 0 6px;
+        }
+
+        .pkg-details ul,
+        .pkg-details ol {
+            padding-left: 22px;
+        }
+
+        .pkg-details li {
+            margin-bottom: 5px;
+        }
+
+        .pkg-cta {
+            padding: 50px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .pkg-cta p {
+            margin: 12px auto 22px;
+            max-width: 650px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 750px) {
+            .pkg-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pkg-hero h1 {
+                font-size: 2rem;
+            }
+
+            .pkg-section {
+                padding: 40px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Tourist Technical</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="packages.html">Tour Packages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="pkg-hero">
+        <h1>Find Your Perfect Getaway</h1>
+        <p>
+            Discover beautiful beaches, explore islands, and enjoy
+            unforgettable experiences across the Visayas.
+        </p>
+        <a href="#available-packages">Explore Packages</a>
+    </section>
+
+    <section class="pkg-section" id="available-packages">
+        <h2>Our Tour Packages</h2>
+        <p class="pkg-intro">
+            Choose a package that suits your travel plans, from relaxing
+            beach escapes to exciting island adventures.
+        </p>
+
+        <div class="pkg-grid">
+
+            <!-- PACKAGE 1 -->
+            <article class="pkg-card">
+                <img src="images/alona-beach.jpg" alt="Alona Beach in Bohol">
+
+                <div class="pkg-card-content">
+                    <p class="pkg-location">Central Visayas · Bohol</p>
+                    <h3>Bohol Beach Escape</h3>
+                    <p class="pkg-description">
+                        Enjoy the beautiful coastline of Bohol with time
+                        to relax on the beach and explore nearby attractions.
+                    </p>
+
+                    <div class="pkg-meta">
+                        <span>2 Days / 1 Night</span>
+                        <span>Beach Getaway</span>
+                    </div>
+
+                    <div class="pkg-price">
+                        <span>Price per person</span>
+                        <strong>₱3,500</strong>
+                    </div>
+
+                    <button class="pkg-button"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="package-details-1"
+                        data-open="View Package"
+                        data-close="Hide Details">
+                        View Package
+                    </button>
+
+                    <div class="pkg-details" id="package-details-1" hidden>
+                        <h4>Sample Itinerary</h4>
+                        <ol>
+                            <li><strong>Day 1:</strong> Arrival in Bohol, check-in, beach exploration, and sunset viewing.</li>
+                            <li><strong>Day 2:</strong> Breakfast, free time at the beach, and departure.</li>
+                        </ol>
+
+                        <h4>Package Inclusions</h4>
+                        <ul>
+                            <li>One night's accommodation</li>
+                            <li>Breakfast</li>
+                            <li>Local transfers included in the itinerary</li>
+                            <li>Assistance with tour arrangements</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PACKAGE 2 -->
+            <article class="pkg-card">
+                <img src="images/kalanggaman-island.jpg" alt="Kalanggaman Island">
+
+                <div class="pkg-card-content">
+                    <p class="pkg-location">Eastern Visayas · Leyte</p>
+                    <h3>Kalanggaman Island Day Trip</h3>
+                    <p class="pkg-description">
+                        Visit Kalanggaman Island, known for its long
+                        sandbar, clear waters, and relaxing coastal scenery.
+                    </p>
+
+                    <div class="pkg-meta">
+                        <span>1 Day</span>
+                        <span>Island Hopping</span>
+                    </div>
+
+                    <div class="pkg-price">
+                        <span>Price per person</span>
+                        <strong>₱2,000</strong>
+                    </div>
+
+                    <button class="pkg-button"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="package-details-2"
+                        data-open="View Package"
+                        data-close="Hide Details">
+                        View Package
+                    </button>
+
+                    <div class="pkg-details" id="package-details-2" hidden>
+                        <h4>Sample Itinerary</h4>
+                        <ol>
+                            <li>Meet at the designated departure point.</li>
+                            <li>Travel by boat to Kalanggaman Island.</li>
+                            <li>Enjoy swimming, sightseeing, and beach activities.</li>
+                            <li>Return to the mainland in the afternoon.</li>
+                        </ol>
+
+                        <h4>Package Inclusions</h4>
+                        <ul>
+                            <li>Round-trip boat transfer</li>
+                            <li>Island entrance and environmental fees</li>
+                            <li>Local tour assistance</li>
+                            <li>Free time for swimming and sightseeing</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PACKAGE 3 -->
+            <article class="pkg-card">
+                <img src="images/boracay.jpg" alt="White Beach in Boracay">
+
+                <div class="pkg-card-content">
+                    <p class="pkg-location">Western Visayas · Aklan</p>
+                    <h3>Boracay Beach Holiday</h3>
+                    <p class="pkg-description">
+                        Spend your getaway enjoying Boracay's famous
+                        white sand, clear water, and vibrant beach atmosphere.
+                    </p>
+
+                    <div class="pkg-meta">
+                        <span>3 Days / 2 Nights</span>
+                        <span>Beach Holiday</span>
+                    </div>
+
+                    <div class="pkg-price">
+                        <span>Price per person</span>
+                        <strong>₱6,500</strong>
+                    </div>
+
+                    <button class="pkg-button"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="package-details-3"
+                        data-open="View Package"
+                        data-close="Hide Details">
+                        View Package
+                    </button>
+
+                    <div class="pkg-details" id="package-details-3" hidden>
+                        <h4>Sample Itinerary</h4>
+                        <ol>
+                            <li><strong>Day 1:</strong> Arrival, check-in, and sunset at White Beach.</li>
+                            <li><strong>Day 2:</strong> Beach activities, island-hopping opportunities, and free time.</li>
+                            <li><strong>Day 3:</strong> Breakfast, last-minute sightseeing, and departure.</li>
+                        </ol>
+
+                        <h4>Package Inclusions</h4>
+                        <ul>
+                            <li>Two nights' accommodation</li>
+                            <li>Daily breakfast</li>
+                            <li>Airport or port transfers within the package itinerary</li>
+                            <li>Local tour assistance</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PACKAGE 4 -->
+            <article class="pkg-card">
+                <img src="images/sambawan-island.jpg" alt="Sambawan Island">
+
+                <div class="pkg-card-content">
+                    <p class="pkg-location">Eastern Visayas · Biliran</p>
+                    <h3>Eastern Visayas Island Adventure</h3>
+                    <p class="pkg-description">
+                        Explore Sambawan Island's clear waters, scenic
+                        viewpoints, and peaceful surroundings on an island escape.
+                    </p>
+
+                    <div class="pkg-meta">
+                        <span>2 Days / 1 Night</span>
+                        <span>Island Adventure</span>
+                    </div>
+
+                    <div class="pkg-price">
+                        <span>Price per person</span>
+                        <strong>₱4,000</strong>
+                    </div>
+
+                    <button class="pkg-button"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="package-details-4"
+                        data-open="View Package"
+                        data-close="Hide Details">
+                        View Package
+                    </button>
+
+                    <div class="pkg-details" id="package-details-4" hidden>
+                        <h4>Sample Itinerary</h4>
+                        <ol>
+                            <li><strong>Day 1:</strong> Travel to the departure point, boat transfer, island exploration, and sunset viewing.</li>
+                            <li><strong>Day 2:</strong> Morning swimming, sightseeing, and return to the mainland.</li>
+                        </ol>
+
+                        <h4>Package Inclusions</h4>
+                        <ul>
+                            <li>One night's accommodation or camping arrangement</li>
+                            <li>Round-trip boat transfer</li>
+                            <li>Applicable island fees</li>
+                            <li>Local tour assistance</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="pkg-cta">
+        <h2>Still Deciding Where to Go?</h2>
+        <p>
+            Explore our destinations and find the beach or island
+            that matches your next adventure.
+        </p>
+        <a href="destinations.html">Browse Destinations</a>
+    </section>
+
+    <script>
+        const packageButtons = document.querySelectorAll(".pkg-button");
+
+        packageButtons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                const detailsId = button.getAttribute("aria-controls");
+                const details = document.getElementById(detailsId);
+                const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+                details.hidden = isExpanded;
+                button.setAttribute("aria-expanded", String(!isExpanded));
+
+                button.textContent = isExpanded
+                    ? button.dataset.open
+                    : button.dataset.close;
+            });
+        });
+    </script>
+
+</body>
+</html>
